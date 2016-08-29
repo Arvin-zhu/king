@@ -3,7 +3,7 @@
  */
 var myApp = angular.module('myApp', ['ui.router']);
 myApp.config(['$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider ) {
-    $urlRouterProvider.when('index', '/home')
+    $urlRouterProvider.when('', '/home')
         .when('/list-info','/list-info/product-info')
     $stateProvider.state('home', {
         url: '/home',
