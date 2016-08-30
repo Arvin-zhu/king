@@ -43,7 +43,7 @@ myApp.run(['$rootScope','$location','$state', function($rootScope,$location,$sta
             $(".location").css("display","block");
             $(".arrow").css("display","none");
             $(".footer").css("display","block");
-            $("#index").css("paddingBottom",4.3125+"rem");
+            $("#index").css("paddingBottom",4.3125+"rem")
         }
         if(toState.templateUrl=="product-info.html"||toState.templateUrl=="order-know.html"||toState.templateUrl=="comment.html"){
             $(".theme").html("服务详情");
@@ -51,10 +51,16 @@ myApp.run(['$rootScope','$location','$state', function($rootScope,$location,$sta
             $("#index").css("paddingBottom",0);
             $(".location").css("display","none");
             $(".arrow").css("display","block");
-            $(".arrow a").attr("href","#/list")
+            $(".arrow a").attr("href","#/list");
         }
         if(toState.templateUrl=="product-info.html"){
             $($(".nav li")[0]).addClass("active").siblings().removeClass("active");
+            $(".menu-bar").on("click",function(){
+                $("#list-info .order-rightnow").toggleClass("move-left2");
+            })
+            setTimeout(function () {
+                $(".wrapper").addClass("change-bottom");
+            },200)
         }
         if(toState.templateUrl=="comment.html"){
             $($(".nav li")[1]).addClass("active").siblings().removeClass("active");

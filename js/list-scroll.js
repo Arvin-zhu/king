@@ -26,20 +26,16 @@ function loaded() {
         },
         onScrollMove: function () {
             if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
-                console.log("aa");
-
                 pullUpEl.className = 'flip';
                 pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
                 this.maxScrollY = this.maxScrollY;
             } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
-                console.log("bb")
                 pullUpEl.className = '';
                 pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
                 this.maxScrollY = pullUpOffset;
             }
         },
         onScrollEnd: function () {
-            console.log(this.y)
             if (pullUpEl.className.match('flip')) {
                 pullUpEl.className = 'loading';
                 pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';

@@ -1,6 +1,5 @@
 window.onload=function(){
-        var judge= 0,
-            container_h=$("#index").css("height");
+        var judge= 0;
         $(".location").on("click",function(){
             if(judge==0){
                 $(".district").slideDown(200);
@@ -25,8 +24,10 @@ window.onload=function(){
             judge=0;
         })
         $(".menu-bar").on("click",function(){
-            $("#index").toggleClass("move-left");
+            $("body").toggleClass("move-left");
             $(".fold").toggleClass("move-left");
+            $("#index .head").toggleClass("move-left2");
+            $("#index .footer").toggleClass("move-left2");
+            $("#index .district").toggleClass("move-left2");
         })
-        $(".fold").css("height",container_h);
 }
