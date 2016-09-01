@@ -37,13 +37,14 @@ myApp.run(['$rootScope','$location','$state', function($rootScope,$location,$sta
             $(".arrow a").attr("href","#/home");
             $(".footer").css("display","block");
             $("#index").css("paddingBottom",4.3125+"rem");
+            $(".order-rightnow").css("display","none");
         }
         if(toState.templateUrl=="home.html"){
             $(".theme").html("相约金管家");
             $(".location").css("display","block");
             $(".arrow").css("display","none");
             $(".footer").css("display","block");
-            $("#index").css("paddingBottom",4.3125+"rem")
+            $(".order-rightnow").css("display","none");
         }
         if(toState.templateUrl=="product-info.html"||toState.templateUrl=="order-know.html"||toState.templateUrl=="comment.html"){
             $(".theme").html("服务详情");
@@ -52,11 +53,12 @@ myApp.run(['$rootScope','$location','$state', function($rootScope,$location,$sta
             $(".location").css("display","none");
             $(".arrow").css("display","block");
             $(".arrow a").attr("href","#/list");
+            $(".order-rightnow").css("display","block");
         }
         if(toState.templateUrl=="product-info.html"){
             $($(".nav li")[0]).addClass("active").siblings().removeClass("active");
             $(".menu-bar").on("click",function(){
-                $("#list-info .order-rightnow").toggleClass("move-left2");
+                $("#index .order-rightnow").toggleClass("move-left2");
             })
             setTimeout(function () {
                 $(".wrapper").addClass("change-bottom");
