@@ -1474,6 +1474,7 @@ body{
 		}
 		li:nth-child(3){
 			width:28%;
+			position:relative;
 			button{
 				padding:0.3rem 0.3rem;
 				display:block;
@@ -1486,6 +1487,16 @@ body{
 					size:(14/16)+rem;
 					family: "SimHei";
 				}
+			}
+			a{
+				display:block;
+				height:50%;
+				width:100%;
+				margin-top: 20%;
+				position:absolute;
+				top:0px;
+				left:0px;
+				-webkit-tap-highlight-color: rgba(255,0,0,0);
 			}
 		}
 	}
@@ -1590,6 +1601,163 @@ body{
 			content:"";
 			display:block;
 			clear:both;
+		}
+	}
+}
+#comment-detail{
+	width:100%;
+	height:100%;
+	.head{
+		width:100%;
+		height:(80/16/2)+rem;
+		background-color: rgb(191,159,98);
+		position:relative;
+		.arrow{
+			width:(27/16/2)+rem;
+			height:(47/16/2)+rem;
+			position:absolute;
+			top:50%;
+			margin-top: -(47/16/4)+rem;
+			left:5%;
+			background:url("../images/img2.png") no-repeat (-18/16/2)+rem (-7/16/2)+rem;
+			background-size: (721/16/2)+rem;
+		}
+		span{
+			color:white;
+			display:block;
+			width:100%;
+			height:100%;
+			text-align: center;
+			line-height: (80/16/2)+rem;
+			font:{
+				size:(18/16)+rem;
+				family: "SimHei";
+			}
+		}
+	}
+	.main{
+		padding:(25/16/2)+rem;
+		box-sizing: border-box;
+	}
+	.consumer{
+		border-bottom: 1px solid rgb(221,221,221);
+		padding-bottom: (25/16/2)+rem;
+		font-size:0px;
+		img{
+			width:(147/16/2);
+			height:(110/16/2)+rem;
+		}
+		.right{
+			float:right;
+			width:68%;
+			height:(110/16/2)+rem;
+			vertical-align: top;
+			display:-webkit-box;
+			display:-webkit-flex;
+			display:flex;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+			-webkit-justify-content: center;
+			justify-content: center;
+			span{
+				display:block;
+				line-height: 1.5;
+				color:rgb(51,51,51);
+				font:{
+					size:(10/16)+rem;
+					family: "SimHei";
+				}
+			}
+		}
+	}
+	.main>ul{
+		width:100%;
+		list-style-type: none;
+		&>li{
+			width:100%;
+			height:(77/16/2)+rem;
+			list-style-type: none;
+			border-bottom: 1px solid rgb(221,221,221);
+			span{
+				color:rgb(51,51,51);
+				line-height: (77/16/2)+rem;
+				font:{
+					size:(14/16)+rem;
+					family: "SimHei";
+				}
+			}
+		}
+		.right{
+			width:50%;
+			height:100%;
+			float:right;
+			display:-webkit-box;
+			display:-webkit-flex;
+			display:flex;
+			-webkit-justify-content: flex-end;
+			justify-content: flex-end;
+			span{
+				color:rgb(51,51,51);
+				margin-left: 0.5rem;
+				font:{
+					size:(14/16)+rem;
+					family: "SimHei";
+				}
+			}
+
+			span:nth-child(2),span:nth-child(4){
+				display:inline-block;
+				width:(43/16/2)+rem;
+				height:(43/16/2)+rem;
+				border:1px solid rgb(179,179,179);
+				margin-top: (34/16/4)+rem;
+			}
+			span.active{
+				background:url("../images/nike.png") no-repeat center center;
+				background-size: (30/16/2)+rem;
+			}
+		}
+		.star{
+			list-style-type: none;
+			width:50%;
+			height:100%;
+			float:right;
+			display:-webkit-box;
+			display:-webkit-flex;
+			display:flex;
+			-webkit-justify-content: flex-end;
+			justify-content: flex-end;
+			li{
+				float:right;
+				width:(52/16/2)+rem;
+				height:(48/16/2)+rem;
+				margin-top: (29/16/4)+rem;
+			}
+			li.star-default{
+				background:url("../images/star-default.png") no-repeat center center;
+				background-size: (44.44/16/2)+rem (41/16/2)+rem;
+			}
+			li.star-active{
+				background:url("../images/star.png") no-repeat center center;
+				background-size: (44.44/16/2)+rem (41/16/2)+rem;
+			}
+		}
+	}
+	.bottom{
+		width:90%;
+		height:(70/16/2)+rem;
+		background-color: rgb(191,159,98);
+		border-radius: (10/16)+rem;
+		border:none;
+		text-align: center;
+		line-height: (70/16/2)+rem;
+		position:absolute;
+		margin-left: 5%;
+		bottom:(20/16/2)+rem;
+		color:white;
+		font:{
+			size:(18/16)+rem;
+			family: "SimHei";
 		}
 	}
 }

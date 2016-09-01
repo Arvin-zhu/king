@@ -1361,6 +1361,7 @@ body {
 }
 #comment > ul li:nth-child(3) {
   width: 28%;
+  position: relative;
 }
 #comment > ul li:nth-child(3) button {
   padding: 0.3rem 0.3rem;
@@ -1372,6 +1373,16 @@ body {
   color: white;
   font-size: 0.875rem;
   font-family: "SimHei";
+}
+#comment > ul li:nth-child(3) a {
+  display: block;
+  height: 50%;
+  width: 100%;
+  margin-top: 20%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
 }
 #comment .bar-wrap {
   width: 6.46875rem;
@@ -1471,6 +1482,153 @@ body {
   content: "";
   display: block;
   clear: both;
+}
+
+#comment-detail {
+  width: 100%;
+  height: 100%;
+}
+#comment-detail .head {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #bf9f62;
+  position: relative;
+}
+#comment-detail .head .arrow {
+  width: 0.84375rem;
+  height: 1.46875rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.73438rem;
+  left: 5%;
+  background: url("../images/img2.png") no-repeat -0.5625rem -0.21875rem;
+  background-size: 22.53125rem;
+}
+#comment-detail .head span {
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 1.125rem;
+  font-family: "SimHei";
+}
+#comment-detail .main {
+  padding: 0.78125rem;
+  box-sizing: border-box;
+}
+#comment-detail .consumer {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 0.78125rem;
+  font-size: 0px;
+}
+#comment-detail .consumer img {
+  width: 4.59375;
+  height: 3.4375rem;
+}
+#comment-detail .consumer .right {
+  float: right;
+  width: 68%;
+  height: 3.4375rem;
+  vertical-align: top;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+#comment-detail .consumer .right span {
+  display: block;
+  line-height: 1.5;
+  color: #333333;
+  font-size: 0.625rem;
+  font-family: "SimHei";
+}
+#comment-detail .main > ul {
+  width: 100%;
+  list-style-type: none;
+}
+#comment-detail .main > ul > li {
+  width: 100%;
+  height: 2.40625rem;
+  list-style-type: none;
+  border-bottom: 1px solid #dddddd;
+}
+#comment-detail .main > ul > li span {
+  color: #333333;
+  line-height: 2.40625rem;
+  font-size: 0.875rem;
+  font-family: "SimHei";
+}
+#comment-detail .main > ul .right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+#comment-detail .main > ul .right span {
+  color: #333333;
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  font-family: "SimHei";
+}
+#comment-detail .main > ul .right span:nth-child(2), #comment-detail .main > ul .right span:nth-child(4) {
+  display: inline-block;
+  width: 1.34375rem;
+  height: 1.34375rem;
+  border: 1px solid #b3b3b3;
+  margin-top: 0.53125rem;
+}
+#comment-detail .main > ul .right span.active {
+  background: url("../images/nike.png") no-repeat center center;
+  background-size: 0.9375rem;
+}
+#comment-detail .main > ul .star {
+  list-style-type: none;
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+#comment-detail .main > ul .star li {
+  float: right;
+  width: 1.625rem;
+  height: 1.5rem;
+  margin-top: 0.45313rem;
+}
+#comment-detail .main > ul .star li.star-default {
+  background: url("../images/star-default.png") no-repeat center center;
+  background-size: 1.38875rem 1.28125rem;
+}
+#comment-detail .main > ul .star li.star-active {
+  background: url("../images/star.png") no-repeat center center;
+  background-size: 1.38875rem 1.28125rem;
+}
+#comment-detail .bottom {
+  width: 90%;
+  height: 2.1875rem;
+  background-color: #bf9f62;
+  border-radius: 0.625rem;
+  border: none;
+  text-align: center;
+  line-height: 2.1875rem;
+  position: absolute;
+  margin-left: 5%;
+  bottom: 0.625rem;
+  color: white;
+  font-size: 1.125rem;
+  font-family: "SimHei";
 }
 
 @media screen and (max-width: 320px) {
